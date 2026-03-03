@@ -45,3 +45,23 @@ market-access-dashboard/
 ## License
 
 MIT License — free to use, modify, and distribute.
+
+## New: Payer Sentiment Tracker
+
+Monitor payer sentiment and coverage decisions:
+
+```python
+from src.analytics.payer_sentiment_tracker import PayerSentimentTracker
+
+tracker = PayerSentimentTracker()
+tracker.add_payer_assessment(
+    payer_name='Aetna',
+    sentiment='Positive',
+    coverage_status='Covered',
+    comment='Strong support for indication'
+)
+
+summary = tracker.get_coverage_summary()
+avg_sentiment = tracker.get_average_sentiment_score()
+```
+
